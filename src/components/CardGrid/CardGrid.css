@@ -1,0 +1,55 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+body {
+    margin: 0;
+    background-color: #D4D4D4;
+    font-family: 'Inter', sans-serif;
+}
+  
+.grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(339px, 1fr));
+    gap: 60px;
+    /* padding: 40px; */
+    max-width: 1536px;
+    margin: 0 auto;
+    justify-items: center;
+    position: relative;
+    z-index: 1;
+}
+  
+.cardgrid-wrapper {
+    position: relative;
+    padding-top: 100px;
+}
+
+.background-shape {
+    position: absolute;
+    width: 935px;
+    height: 300px;
+    top: 324.6px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(-1) rotate(-30deg);
+    border-radius: 300px;
+    background: #7075F1;
+    z-index: 0;
+}
+  
+@media (max-width: 1400px) {
+    .grid {
+      grid-template-columns: repeat(3, 1fr);
+    }
+}
+  
+@media (max-width: 1050px) {
+    .grid {
+      grid-template-columns: repeat(2, 1fr);
+    }
+}
+  
+@media (max-width: 700px) {
+    .grid {
+      grid-template-columns: 1fr;
+      justify-content: center;
+    }
+}
+  
